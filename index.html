@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="keywords" content="game" />
+  <meta name="description" content="Sea Battle game" />
+  <link href="css/index.css" rel="stylesheet" type="text/css" />
+
+  <title>Sea Battle</title>
+</head>
+
+<body class="body">
+  <div class="wrap">
+    <div class="gameField">
+      <div class="textAbove flex" id="textAbove">Placement of ships</div>
+      <div class="flex outer">
+        <div class="humanField field">
+          <div class="ships" id="humanField"></div>
+        </div>
+        <div class="computerField field" hidden>
+          <div class="ships" id="computerField"></div>
+        </div>
+        <div class="shipGeneration flex" id="shipGeneration">
+          <span class="link bottomDashed" id="randomShipGeneration">Random generation</span>
+          <label class="nicknameLabel" for="inputNickname" id="nicknameLabel">Enter nickname:</label>
+          <input class="inputNickname bottomDashed" id="inputNickname">
+        </div>
+      </div>
+      <div class="gameButtons">
+        <div class="infoText" id="infoText"></div>
+        <button id="playButton" type="button" class="playButton bottomDashed" hidden>Play</button>
+        <button id="newGameButton" type="button" class="newGameButton playButton bottomDashed" hidden>New Game</button>
+      </div>
+    </div>
+  </div>
+<script src="js/index.js"></script>
+</body>
+
+</html>

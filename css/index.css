@@ -1,0 +1,131 @@
+html,body, .wrap{height: 100%}
+.icon-field{background: url("../img/sprite.png") no-repeat;}
+.wrap{
+  width: 1024px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+body{
+  font: normal 24px Bradley Hand, cursive;
+  line-height: 24px;
+  color: rgb(82, 3, 209);
+}
+
+.bottomDashed{
+  border-bottom: dashed 2px rgb(82, 3, 209) !important;
+}
+
+.playButton{
+  font: normal 40px Bradley Hand, cursive;
+  color: rgb(82, 3, 209);
+  width: 144px;
+  height: 45px;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+  border: inherit;
+  background: inherit;
+}
+
+.newGameButton{
+  font-size: 25px;
+  margin-top: 10px;
+}
+
+
+.flex{
+  display: flex;
+}
+
+
+.gameField{
+  width: 860px;
+  height: 563px;
+  position: relative;
+  margin: 0 auto;
+  background: url("../img/grid.png") repeat;
+}
+.textAbove{
+  height: 66px;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  margin-bottom: 7px;
+}
+.gameButtons{text-align: center;}
+.infoText{color:red;padding-top: 10px;}
+
+
+.field{
+  width: 366px;
+  height: 363px;
+  flex-shrink: 0;
+  position: relative;
+  background: url("../img/gameField.png") no-repeat;
+}
+.computerField{margin-left: 31px;}
+.outer{
+  margin-bottom: 21px;
+  padding-left: 38px;
+}
+
+
+.ships{
+  width: 330px;
+  height: 330px;
+  position: relative;
+  left: 28px;
+  top: 26px;
+}
+.ship{
+  height: 35px;
+  position: absolute;
+}
+
+.fourTiered{width: 134px;background-color: rgba(245, 42, 245, 0.4);}
+.threeTiered{width: 101px;background-color: rgba(7, 230, 189, 0.4);}
+.twoTiered{width: 68px;background-color: rgba(250, 250, 27, 0.4);}
+.singleTiered{width: 35px;background-color: rgba(51, 100, 245, 0.4);}
+
+.shipGeneration{margin-left: 52px; flex-direction: column;}
+.link{
+  font-size: 25px;
+  cursor: pointer;
+}
+.nicknameLabel{
+  margin-top: 20px;
+}
+.inputNickname{
+  margin-top: 20px;
+  background: inherit;
+  border: inherit;
+  font: normal 24px Bradley Hand, cursive;
+  color: rgb(82, 3, 209);
+}
+
+.icon-field{
+  width: 33px;
+  height: 33px;
+  display: block;
+  position: absolute;
+  z-index: 5;
+}
+.dot{background-position: -410px 0;}
+.red-cross{background-position: -410px -50px;}
+.shaded-cell{background-position: -410px -100px;}
+.shaded-cell_red{background-position: -410px -140px;}
+.explosion{background-position: -150px -150px; z-index: 6; opacity: 0; transform: scale(.2);}
+
+@keyframes Explosion {
+  0% {opacity: 0; transform: scale(.2);}
+  50% {opacity: 1; transform: scale(1);}
+  100% {opacity: 0}
+}
+
+.explosion.active {animation-name: Explosion; animation-duration: 0.4s; transform: scale(1);}
+
+.vertical{
+  transform: rotate(90deg);
+  transform-origin: 17.5px 17.5px;
+}
